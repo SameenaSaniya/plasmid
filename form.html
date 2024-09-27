@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- Include Bootstrap for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding: 50px;
+            background: linear-gradient(to right, #5b82cb, #3d3bcd,#5b82cb);
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(150, 165, 201);
+            border-radius: 8px;
+            box-shadow: inset 5px 5px 12px white,
+            5px 5px 12px white;
+        }
+        .error {
+            color:red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+       <u><h2 class="text-center">Registration Form</h2></u>
+        <form id="registrationForm">
+            <div class="mb-3">
+                <label for="Full Name" class=""form-label>Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                <span id="nameError" class="error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <span id="emailError" class="error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter 10-digit phone number">
+                <span id="phoneError" class="error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                <span id="passwordError" class="error"></span>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                <span id="confirmPasswordError" class="error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
